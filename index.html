@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ghostly Background</title>
+  <title>Ghostly Typing Tester</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=MedievalSharp&family=UnifrakturMaguntia&family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -46,21 +49,32 @@
           </svg>
       </div>
       
-      <!-- Floating particles -->
-      <div class="particle"></div>
-      <div class="particle"></div>
-      <div class="particle"></div>
-      <div class="particle"></div>
-      <div class="particle"></div>
-      <div class="particle"></div>
+      <!-- Central text area for typing -->
+      <div class="text-area" id="textDisplay"></div>
       
-      <!-- Central clear area for text -->
-      <div class="text-area">
-          <!-- Ghostly typing text will go here later -->
+      <!-- Controls panel -->
+      <div class="controls-panel">
+        <select id="difficultySelector" class="difficulty-selector">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        
+        <select id="fontSelector" class="font-selector">
+          <option value="cinzel">Cinzel</option>
+          <option value="medieval">Medieval Sharp</option>
+          <option value="unifraktur">UnifrakturMaguntia</option>
+          <option value="special">Special Elite</option>
+        </select>
       </div>
       
-      <!-- Techy scan lines -->
-      <div class="scanlines"></div>
+      <!-- New text button (ghost icon) -->
+      <button id="newTextBtn" class="new-text-btn" title="New Text">
+        👻
+      </button>
+      
+      <!-- Invisible typing input -->
+      <input type="text" id="typingInput" autocomplete="off" spellcheck="false">
   </div>
 
   <script src="script.js"></script>
